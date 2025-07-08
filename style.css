@@ -1,0 +1,143 @@
+/* Google Fonts - Optional, but recommended for a modern look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 56px; /* Height of the fixed navbar */
+    position: relative; /* Required for scrollspy */
+}
+
+/* Custom Colors */
+:root {
+    --primary-color: #0d6efd; /* Bootstrap Blue */
+    --secondary-color: #6c757d; /* Bootstrap Gray */
+    --light-bg: #f8f9fa;
+    --dark-bg: #212529;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    /*background: var(--dark-bg);*/
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* About Section */
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+}
+
+.skills-list .badge {
+    font-size: 0.9rem;
+    padding: 0.6em 1em;
+    margin: 0.2em;
+}
+
+/* Research Section */
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+pre {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Projects Section */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.project-card .card-footer {
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+/* Contact Section */
+.social-icons a {
+    color: var(--dark-bg);
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+/* ======================== */
+/* Particles Animation CSS  */
+/* ======================== */
+
+#tsparticles {
+    position: fixed; /* Position it relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* CRITICAL: This places the animation behind all other content */
+    background-color: #212529; /* Match your dark background */
+}
+/* ========================================= */
+/* FIX: Make content sections readable       */
+/* ========================================= */
+
+/* Give the main content sections a solid white background */
+#about, 
+#projects {
+    background-color: #ffffff; /* White background */
+    color: #212529;            /* Dark text color */
+}
+
+/* 
+  This ensures the Research and Contact sections, which already have
+  a light background class (.bg-light), also have dark text.
+*/
+#research,
+#contact {
+    color: #212529; /* Dark text color */
+}
